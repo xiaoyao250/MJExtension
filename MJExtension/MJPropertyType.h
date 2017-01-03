@@ -24,6 +24,8 @@
 /** 是否为BOOL类型 */
 @property (nonatomic, readonly, getter=isBoolType) BOOL boolType;
 
+@property (nonatomic,readonly, getter = isclassType) BOOL classType;
+
 /** 对象类型（如果是基本数据类型，此值为nil） */
 @property (nonatomic, readonly) Class typeClass;
 

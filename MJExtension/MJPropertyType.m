@@ -55,6 +55,10 @@ static NSMutableDictionary *types_;
                [code isEqualToString:MJPropertyTypeIvar] ||
                [code isEqualToString:MJPropertyTypeMethod]) {
         _KVCDisabled = YES;
+        // 增加Class类型的判断
+    } else if ([code isEqualToString:MJPropertyTypeClass]){
+        _classType = YES;
+        _KVCDisabled = YES;
     }
     
     // 是否为数字类型
